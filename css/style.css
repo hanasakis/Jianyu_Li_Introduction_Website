@@ -257,7 +257,7 @@ img {
 .hero-avatar {
     width: 280px;
     height: 280px;
-    border-radius: 50%;
+    border-radius: 12px;
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
     display: flex;
     align-items: center;
@@ -270,7 +270,7 @@ img {
 .hero-avatar-img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 12px;
     object-fit: contain;
 }
 
