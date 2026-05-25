@@ -156,54 +156,52 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>大模型 & AI</h3>
+                    <h3>大模型 & Agent 工作流</h3>
                     <ul class="skill-list">
-                        <li>LangChain / LangGraph</li>
+                        <li>LangGraph 动态路由工作流</li>
                         <li>RAG 检索增强生成</li>
-                        <li>Dify + Ollama</li>
-                        <li>Agent + Workflow</li>
-                        <li>Agent + FunctionTool</li>
-                        <li>VLM 视觉语言模型</li>
-                        <li>LoRA 指令微调</li>
+                        <li>Agent 意图识别与工具调用</li>
+                        <li>Ollama 本地模型部署</li>
+                        <li>Pydantic Schema 安全校验</li>
                         <li>机器学习 (Scikit-learn)</li>
-                        <li>深度学习 (PyTorch, TensorFlow)</li>
+                        <li>深度学习 (PyTorch)</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-                    <h3>数据 & 向量库</h3>
+                    <h3>数据工程 & 分析</h3>
                     <ul class="skill-list">
-                        <li>Milvus / Chroma</li>
+                        <li>DuckDB 分析型数据库</li>
                         <li>Python (Pandas, NumPy)</li>
-                        <li>SQL / NoSQL</li>
-                        <li>数据可视化</li>
+                        <li>SQL 查询与 SQLGlot 校验</li>
+                        <li>FTS / BM25 关键词检索</li>
                         <li>ETL 数据处理</li>
-                        <li>BM25 / 混合检索</li>
-                        <li>文本向量化</li>
+                        <li>数据可视化</li>
+                        <li>评估集设计与指标统计</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3>文档智能 & 知识工程</h3>
+                    <ul class="skill-list">
+                        <li>Docling 文档结构化转换</li>
+                        <li>PyMuPDF4LLM PDF 解析</li>
+                        <li>文档 Chunking 与 Metadata 管理</li>
+                        <li>向量数据库 (Chroma)</li>
+                        <li>混合检索 (Dense + Sparse)</li>
+                        <li>知识库构建与评估</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
-                    <h3>云计算 & 部署</h3>
+                    <h3>工程化 & 部署</h3>
                     <ul class="skill-list">
-                        <li>Docker / Kubernetes</li>
-                        <li>AWS / Azure</li>
-                        <li>CI/CD 流水线</li>
-                        <li>微服务架构</li>
+                        <li>Docker 容器化</li>
+                        <li>Streamlit 交互应用</li>
+                        <li>Git / GitHub 版本控制</li>
+                        <li>FastAPI / REST API</li>
                         <li>Linux 服务器管理</li>
-                        <li>Ollama 本地部署</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>开发工具</h3>
-                    <ul class="skill-list">
-                        <li>Git / GitHub</li>
-                        <li>VS Code / Jupyter</li>
-                        <li>REST API 设计</li>
-                        <li>前端基础 (HTML, CSS, JS)</li>
-                        <li>Agile / Scrum</li>
-                        <li>PyMuPDF / OCR</li>
+                        <li>CI/CD 流水线</li>
                     </ul>
                 </div>
             </div>
@@ -218,27 +216,27 @@
                 <div class="project-detail-card">
                     <div class="project-header">
                         <span class="project-tag">大模型应用</span>
-                        <h3>元酱AI助手</h3>
+                        <h3>元酱 OpsGuard：基于 deepseek-r1:8b 的电商履约与卖家风险巡检 Agent</h3>
                         <div class="project-meta">
-                            <span><i class="fa-solid fa-calendar"></i> 2024</span>
+                            <span><i class="fa-solid fa-calendar"></i> 2025</span>
                             <span><i class="fa-solid fa-user-tie"></i> 大模型工程师</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-desc">
                             <h4>项目描述</h4>
-                            <p>本项目基于Ollama本地部署Qwen系列大模型，并采用LoRA技术对其进行了电商领域知识的指令微调。在此基础上，构建了基于LangChain的RAG检索增强生成系统，显著提升了AI助手在专业问答中的准确性。同时，通过引入Agent进行意图识别，实现了根据用户意图自动调用相应工具的功能，有效简化了电商巡检任务的下发流程。</p>
+                            <p>基于本地 Ollama DeepSeek-R1 构建电商运营巡检 Agent，面向卖家履约异常、物流延迟、低分评价和订单风险巡检场景，实现自然语言查询、风险解释和任务下发闭环。选用 Olist 公开电商数据集构建可复现业务环境，使用 DuckDB 建立订单、卖家、商品、物流和评价分析视图，设计延迟率、低分率、取消率、运费占比等运营风险指标。基于 LangGraph 设计动态路由工作流，区分 SOP 问答、指标查询、巡检任务创建和混合问题，并通过 Pydantic schema、SQLGlot 只读校验和任务工具保证 Agent 调用安全可靠。</p>
                         </div>
                         <div class="project-responsibilities">
                             <h4>主要职责</h4>
                             <ul>
-                                <li>负责对大模型进行电商领域知识定制化（Ollama 本地部署、LoRA 指令微调），使其回答的专业性和准确性远超未优化的公开模型。</li>
-                                <li>基于 LangChain 框架搭建了完整的 RAG（检索增强生成）系统，并构建了基于企业私有知识的智能问答系统，确保信息输出的可靠性与实用性。</li>
-                                <li>引入 Agent（智能体）方案进行用户意图识别，通过智能意图识别与流程自动化，将复杂的任务操作简化为一步对话，极大提升了工作效率。</li>
+                                <li>构建 Olist 电商数据环境：使用 DuckDB 建立订单、卖家、商品、物流和评价分析视图，设计延迟率、低分率、取消率、运费占比等运营风险指标，为 Agent 查询提供结构化数据基础。</li>
+                                <li>设计 SOP 文档处理管线与 Agent 工作流：使用 Docling/PyMuPDF4LLM 将巡检规则和差评处理流程转换为带 metadata 的结构化文档并基于 FTS/BM25 实现可引用检索；基于 LangGraph 设计动态路由工作流，区分 SOP 问答、指标查询、巡检任务创建和混合问题。</li>
+                                <li>构建评估体系与运营工作台：开发 Streamlit 运营工作台，构建评估集统计意图识别准确率、指标工具成功率、SOP 来源命中率和任务创建成功率，确保 Agent 各环节可度量、可复盘。</li>
                             </ul>
                         </div>
                         <div class="project-tech">
-                            <span>Ollama</span><span>Qwen</span><span>LoRA</span><span>LangChain</span><span>RAG</span><span>Agent</span>
+                            <span>Ollama</span><span>DeepSeek-R1</span><span>LangGraph</span><span>DuckDB</span><span>Olist</span><span>Docling</span><span>PyMuPDF4LLM</span><span>BM25</span><span>Streamlit</span><span>Pydantic</span><span>SQLGlot</span>
                         </div>
                     </div>
                 </div>
@@ -246,7 +244,7 @@
                 <div class="project-detail-card">
                     <div class="project-header">
                         <span class="project-tag">RAG系统</span>
-                        <h3>基于DeepSeek-V3的半导体文档知识库RAG系统</h3>
+                        <h3>FabYield Insight：基于本地 DeepSeek-R1 的半导体制程异常知识问答系统</h3>
                         <div class="project-meta">
                             <span><i class="fa-solid fa-calendar"></i> 2025</span>
                             <span><i class="fa-solid fa-user-tie"></i> 大模型(RAG)工程师</span>
@@ -255,19 +253,18 @@
                     <div class="project-body">
                         <div class="project-desc">
                             <h4>项目描述</h4>
-                            <p>参与开发基于DeepSeek-V3的半导体文档知识库RAG系统，针对半导体领域大模型知识滞后、幻觉率高的痛点，运用LangChain/LangGraph、Milvus等技术搭建RAG架构，完成文档解析、向量检索引优化与双层评估体系设计，显著提升领域问答准确率，实现半导体知识实时更新与可验证回答。</p>
+                            <p>基于本地 Ollama DeepSeek-R1 构建半导体制程异常分析与知识问答系统，面向良率/制程工程师的失败样本解释、异常特征定位、SOP 查询和工程排查报告生成场景。选用 UCI SECOM 半导体制造数据集构建可复现制程分析环境，使用 DuckDB 管理 591 个匿名制程变量、通过/失败标签、缺失率和统计分布，并实现样本级 z-score 异常分析。基于 LangGraph 构建问题路由和可信回答工作流，支持概念问答、单样本异常分析、批量失败样本分析和报告生成，并通过 answer_guard 防止匿名特征被错误解释为真实设备根因。</p>
                         </div>
                         <div class="project-responsibilities">
                             <h4>主要职责</h4>
                             <ul>
-                                <li>参与半导体领域RAG系统开发，针对大模型知识滞后、幻觉率高问题，设计实现多格式文档增强方案，基于PyMuPDF+UnstructuredLoader完成PDF/Word/HTML解析，结合Tesseract OCR提取图片信息，通过「章节分块+SemanticChunker」解决文本跨页断裂问题。</li>
-                                <li>参与文本向量化与检索优化，基于bge-large-zh-v1.5+BM25构建Dense/Sparse双索引，调优Milvus参数（M=30、efConstruction=64）与DAAT算法，实现"向量+关键词"混合检索，提升检索精度与速度。</li>
-                                <li>参与基于LangGraph定制动态路由工作流，引入Corrective/Adaptive RAG搭建双层评估体系，通过Transform_Query重检索机制降低大模型幻觉率，使问答准确率较传统方案显著提升。</li>
-                                <li>参与Milvus向量数据库Docker集群部署，完成弹性节点配置，保障分布式存储与检索的工程化落地。</li>
+                                <li>构建 SECOM 制程数据分析环境：使用 DuckDB 管理 591 个匿名制程变量与通过/失败标签，实现样本级 z-score 异常分析、缺失率统计和失败样本批量筛选，为 Agent 提供可查询的制程数据基础。</li>
+                                <li>设计文档解析管线与可信 RAG 工作流：使用 Docling/PyMuPDF4LLM 将制程排查 SOP、缺失值处理规范和报告模板转为结构化 Markdown/JSON 并保留章节、页码和表格信息；基于 LangGraph 构建问题路由工作流，通过 answer_guard 防止匿名特征被错误解释为真实设备根因。</li>
+                                <li>构建双层评估体系：统计问题路由准确率、样本分析成功率、SOP 来源命中率、无依据断言率和合理拒答率，用数据验证 RAG 与工具调用的可靠性，确保输出可追溯、不确定性可说明。</li>
                             </ul>
                         </div>
                         <div class="project-tech">
-                            <span>DeepSeek-V3</span><span>LangChain</span><span>LangGraph</span><span>Milvus</span><span>RAG</span><span>bge-large-zh</span><span>BM25</span><span>PyMuPDF</span><span>OCR</span><span>Docker</span>
+                            <span>Ollama</span><span>DeepSeek-R1</span><span>LangGraph</span><span>DuckDB</span><span>UCI SECOM</span><span>Docling</span><span>PyMuPDF4LLM</span><span>BM25</span><span>FTS</span><span>Pydantic</span>
                         </div>
                     </div>
                 </div>
